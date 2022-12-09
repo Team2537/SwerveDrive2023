@@ -19,10 +19,10 @@ public final class Constants {
     public static final int BACK_LEFT_DRIVE = 0;
     public static final int BACK_RIGHT_DRIVE = 0;
 
-    public static final int FRONT_LEFT_PIVOT = 0;
-    public static final int FRONT_RIGHT_PIVOT = 0;
-    public static final int BACK_LEFT_PIVOT = 0;
-    public static final int BACK_RIGHT_PIVOT = 0;
+    public static final int FRONT_LEFT_STEER = 0;
+    public static final int FRONT_RIGHT_STEER = 0;
+    public static final int BACK_LEFT_STEER = 0;
+    public static final int BACK_RIGHT_STEER = 0;
 
     // Measurements
     public static final double WHEEL_BASE = 526.13;
