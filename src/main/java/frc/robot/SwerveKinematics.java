@@ -29,7 +29,7 @@ public class SwerveKinematics {
         SwerveModuleState[] states =  m_kinematics.toSwerveModuleStates(chassisSpeeds);
 
         // Swerve drive specialties says modules can reach 12 ft/s (3.6576 m/s)
-        SwerveDriveKinematics.desaturateWheelSpeeds(states, 3.6576);
+        SwerveDriveKinematics.desaturateWheelSpeeds(states, MAX_SPEED);
 
         return states;
     }

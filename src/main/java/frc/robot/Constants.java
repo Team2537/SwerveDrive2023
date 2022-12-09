@@ -27,4 +27,10 @@ public final class Constants {
     // Measurements
     public static final double WHEEL_BASE = 526.13;
     public static final double TRACK_WIDTH = 526.95;
+
+    public static final double MAX_SPEED = 3.6576; // meters per second
+
+    public static final double WHEEL_DIAMETER = 10.16; // centimeters
+
+    public static final int CANCODER_COUNTS = 4096; // CANCoders have 4096 counts per revolution
 }
