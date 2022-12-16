@@ -7,10 +7,18 @@ import edu.wpi.first.math.kinematics.SwerveModuleState;
 
 import static frc.robot.Constants.*;
 
+/**
+ * <p>Class to perform forward kinematics based on given chassis speeds (x, y, and angular velocity).</p>
+ * <strong>All swerve module states will be returned in the order: front left, front right, back left, back right</strong>
+ * @see SwerveModule
+ */
 public class SwerveKinematics {
     
     private final SwerveDriveKinematics m_kinematics;
 
+    /**
+     * Initializes object based off of track width and wheel base saved in {@link Constants}
+     */
     public SwerveKinematics() {
         Translation2d frontLeft = new Translation2d(-TRACK_WIDTH / 2, WHEEL_BASE / 2);
         Translation2d frontRight = new Translation2d(TRACK_WIDTH / 2, WHEEL_BASE / 2);

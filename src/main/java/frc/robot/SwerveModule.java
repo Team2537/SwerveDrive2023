@@ -9,6 +9,10 @@ import edu.wpi.first.math.kinematics.SwerveModuleState;
 
 import static frc.robot.Constants.*;
 
+/**
+ * Class that directly interfaces with the motor controllers of each swerve module.
+ * @see SwerveKinematics
+ */
 public class SwerveModule {
     
     private final CANSparkMax m_drive, m_steer;
@@ -26,8 +30,8 @@ public class SwerveModule {
 
         m_steerOffset = steerOffset;
         
-        // Set velocity conversion factor to change encoder units from RPM to m/s.
-        m_drive.getEncoder().setVelocityConversionFactor(60 * Math.PI * WHEEL_DIAMETER / 100);
+        // Set velocity conversion factor to change encoder units from RPM to m/s. (Also compensates for gear ratio of 8.14 : 1)
+        m_drive.getEncoder().setVelocityConversionFactor(60 * Math.PI * WHEEL_DIAMETER / 100 / 8.14);
 
         RelativeEncoder canCoder = m_steer.getAlternateEncoder(CANCODER_COUNTS);
 
